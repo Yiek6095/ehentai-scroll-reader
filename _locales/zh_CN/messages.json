@@ -1,0 +1,11 @@
+{
+  "name": {
+    "message": "E-Hentai 滚动阅读器"
+  },
+  "description": {
+    "message": "适用于 E-Hentai 的非官方滚动阅读扩展。打开即定位到所选页，支持每次10页和全部加载，可调整阅读宽度与黑白背景。"
+  },
+  "title": {
+    "message": "阅读设置"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": {
+    "message": "E-Hentai 滾動閱讀器"
+  },
+  "description": {
+    "message": "適用於 E-Hentai 的非官方捲動閱讀擴充功能。開啟即定位到所選頁，支援每次10頁和全部載入，可調整閱讀寬度與黑白背景。"
+  },
+  "title": {
+    "message": "閱讀設定"
+  }
+}

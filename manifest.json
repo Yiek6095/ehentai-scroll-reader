@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_name__",
+  "version": "2.0.14",
+  "description": "__MSG_description__",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "__MSG_title__",
+    "default_popup": "settings.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://e-hentai.org/s/*"
+      ],
+      "js": [
+        "mode.js",
+        "i18n.js",
+        "in-page-settings.js",
+        "reader.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "default_locale": "en"
+}

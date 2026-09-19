@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430">
+<rect width="1200" height="430" rx="20" fill="#171b25"/>
+<g font-family="Segoe UI,Microsoft YaHei,sans-serif" fill="#eef3fc">
+<text x="40" y="60" font-size="30" font-weight="600">Install / 安装流程</text>
+<text x="40" y="96" font-size="18" fill="#b6c4db">Schematic · 示意图 — keep the extracted folder / 请保留解压后的文件夹</text>
+<rect x="40" y="140" width="260" height="190" rx="14" fill="#273348"/><text x="60" y="185" font-size="28" fill="#a9c7ff">1</text><text x="60" y="230" font-size="18">Download &amp; extract ZIP</text><text x="60" y="272" font-size="16">下载并完整解压</text><rect x="330" y="140" width="260" height="190" rx="14" fill="#273348"/><text x="350" y="185" font-size="28" fill="#a9c7ff">2</text><text x="350" y="230" font-size="18">chrome://extensions</text><text x="350" y="272" font-size="16">打开扩展管理页</text><rect x="620" y="140" width="260" height="190" rx="14" fill="#273348"/><text x="640" y="185" font-size="28" fill="#a9c7ff">3</text><text x="640" y="230" font-size="18">Developer mode → ON</text><text x="640" y="272" font-size="16">开启开发者模式</text><rect x="910" y="140" width="260" height="190" rx="14" fill="#273348"/><text x="930" y="185" font-size="28" fill="#a9c7ff">4</text><text x="930" y="230" font-size="18">Load unpacked</text><text x="930" y="272" font-size="16">选择含 manifest.json 的文件夹</text>
+<text x="40" y="380" font-size="19">Then open or refresh a reading page / 最后打开或刷新漫画阅读页</text></g></svg>
