@@ -1,6 +1,6 @@
 # E-Hentai 滚动阅读器
 
-[English](README.md) · 版本 2.0.14 · [MIT 许可证](LICENSE)
+[English](README.md) · 版本 2.0.15 · [MIT 许可证](LICENSE)
 
 将 E-Hentai 的单页漫画阅读界面变成连续滚动阅读。打开第几页，就从那一页开始；前后的页面仍然保留，可以向上或向下阅读。
 
@@ -17,6 +17,10 @@
 
 两种模式都会先摆出整本的页面位置。页面空位不等于图片已下载；“已加载”只统计成功加载的图片。靠近开头或结尾时，一批可能不足 10 页；附近批次可能同时加载。
 
+## 工具栏更新
+
+分屏或窄窗口下，工具栏会整齐分行。宽度旁的 **− / ＋** 每次调整 10 px，并自动保存。
+
 ## 功能
 
 - 中英文切换，首次使用默认英文。
@@ -29,7 +33,7 @@
 
 ## 安装
 
-1. 在仓库的 **Releases** 页面下载附件 `ehentai-scroll-reader-v2.0.14.zip`；也可选择 **Code → Download ZIP** 下载源码。
+1. 在仓库的 **Releases** 页面下载附件 `ehentai-scroll-reader-v2.0.15.zip`；也可选择 **Code → Download ZIP** 下载源码。
 2. 完整解压到一个固定文件夹，不要直接把 ZIP 拖进 Chrome。
 3. 在 Chrome 地址栏打开 `chrome://extensions`，开启右上角的 **开发者模式 / Developer mode**。
 4. 点击 **加载已解压的扩展程序 / Load unpacked**，选择直接包含 `manifest.json` 的文件夹。

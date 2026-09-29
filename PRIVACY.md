@@ -1,6 +1,6 @@
 # Privacy / 隐私说明
 
-Applies to version 2.0.14. Based on inspection of the included source code.
+Applies to version 2.0.15. Based on inspection of the included source code.
 
 ## English
 

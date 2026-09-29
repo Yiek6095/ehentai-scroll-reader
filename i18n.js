@@ -3,6 +3,8 @@ globalThis.readerI18n = (() => {
   let language = 'en';
   const roots = new Set(), originals = new WeakMap(), attributes = new WeakMap();
   const dictionary = {
+    '减小宽度':'Decrease width','增加宽度':'Increase width',
+    '减小宽度（10 px）':'Decrease width (10 px)','增加宽度（10 px）':'Increase width (10 px)',
     '模式和语言将在点击“应用并刷新”后一起保存。取消或关闭不会保存这次选择。':'Mode and language are saved together when you click Apply and reload. Cancel or close to discard your changes.',
     '选择模式和语言后，点击应用一起保存并刷新当前阅读页。':'Choose a mode and language, then click Apply to save both and reload the current reader.',
     '全部加载完成':'All images loaded',

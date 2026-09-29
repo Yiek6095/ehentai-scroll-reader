@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.15
+
+- Align toolbar controls into responsive rows for split-screen windows.
+- Add width minus/plus buttons in 10 px steps, with saved preferences and boundary handling.
+- Keep both loading modes unchanged.
+- Verify English/Chinese layouts from 390 to 1920 px and reading-position restoration.
+
 ## 2.0.14
 
 - Keep two modes: **Load 10 pages at a time** (default) and **Load all pages**.

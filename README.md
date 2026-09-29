@@ -1,6 +1,6 @@
 # E-Hentai Scroll Reader
 
-[简体中文](README.zh-CN.md) · Version 2.0.14 · [MIT License](LICENSE)
+[简体中文](README.zh-CN.md) · Version 2.0.15 · [MIT License](LICENSE)
 
 An unofficial Chrome extension that turns E-Hentai's single-image reader into a continuous scrolling reader. Open a page and start there, with earlier and later pages still available above and below.
 
@@ -17,6 +17,10 @@ The screenshots use generated sample pages, not website or manga content.
 
 All page positions are created upfront. An empty page position does not mean the image has finished downloading. The loaded counter counts successful images. Batch boundaries near the start or end may contain fewer than 10 pages; nearby batches can overlap in time.
 
+## Toolbar update
+
+The toolbar groups controls into aligned rows in split-screen windows. Use the width **− / +** buttons to adjust by 10 px; changes are saved automatically.
+
 ## Features
 
 - English and Chinese interface; English on first use.
@@ -29,7 +33,7 @@ All page positions are created upfront. An empty page position does not mean the
 
 ## Install
 
-1. In this repository's **Releases** section, download the attached `ehentai-scroll-reader-v2.0.14.zip` file. Alternatively, use **Code → Download ZIP** for the source.
+1. In this repository's **Releases** section, download the attached `ehentai-scroll-reader-v2.0.15.zip` file. Alternatively, use **Code → Download ZIP** for the source.
 2. Extract the ZIP to a folder you will keep. Do not select or drag the ZIP itself into Chrome.
 3. Open `chrome://extensions` and turn on **Developer mode**.
 4. Click **Load unpacked** and choose the extracted folder containing `manifest.json` directly inside it.

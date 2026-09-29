@@ -74,27 +74,46 @@
     :host([data-theme="light"]) #reader-settings-dialog{background:#fff;color:#20242b}
     :host([data-theme="light"]) #reader-settings-dialog small{color:#555}
     :host([data-theme="light"]) #reader-settings-dialog button{background:#eee;color:#20242b}
-    header{background:#242730;padding:12px 20px;gap:12px 24px;justify-content:space-between;font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;border-bottom:1px solid #434a58}
-    .reader-summary{display:flex;flex-direction:column;gap:4px;flex:0 1 auto;text-align:left}
-    .reader-title{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-    .reader-title strong{font-size:17px;font-weight:650;white-space:nowrap}
+    header{background:#242730;padding:10px 16px;gap:10px 20px;justify-content:space-between;font:14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;border-bottom:1px solid #434a58}
+    .reader-summary{display:flex;flex-direction:column;gap:4px;text-align:left;min-width:0}
+    .reader-title{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .reader-title strong{font-size:16px;font-weight:650;white-space:nowrap}
     .version{font-size:12px;color:#b7bed0}
-    .mode-badge{font-size:13px;padding:3px 9px;border-radius:6px;background:#354259;color:#dce8ff;white-space:nowrap}
-    #status{font-size:14px;color:#c6cedb;font-variant-numeric:tabular-nums}
-    #toolbar-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap;min-width:0}
-    #toolbar-actions button,#toolbar-actions select{font:inherit;min-height:40px;padding:7px 12px;border-radius:8px;white-space:nowrap;flex-shrink:0}
-    #toolbar-actions label{display:flex;align-items:center;gap:8px;white-space:nowrap}
-    #toolbar-actions input{font:inherit}
-    #width{width:110px;min-width:60px;accent-color:#729de9}
-    #width-number{height:38px;padding:4px 7px;border:1px solid #788298;border-radius:6px;font-variant-numeric:tabular-nums}
+    .mode-badge{font-size:12px;padding:3px 8px;border-radius:6px;background:#354259;color:#dce8ff}
+    #status{font-size:13px;color:#c6cedb;font-variant-numeric:tabular-nums}
+    #toolbar-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}
+    #toolbar-actions button,#toolbar-actions select{font:inherit;min-height:36px;padding:6px 10px;border-radius:7px;white-space:nowrap}
+    #toolbar-actions>label{display:flex;align-items:center;gap:8px;margin:0!important;white-space:nowrap}
+    .width-control{display:flex;align-items:center;gap:6px;min-width:0}
+    .width-control label{white-space:nowrap}
+    #toolbar-actions input{font:inherit;min-width:0}
+    #width{width:90px;accent-color:#729de9}
+    #width-number{height:36px;padding:4px 6px;border:1px solid #788298;border-radius:6px;font-variant-numeric:tabular-nums}
+    #toolbar-actions #width-minus,#toolbar-actions #width-plus{width:32px;min-width:32px;padding:0;font-size:20px}
+    #toolbar-actions button:disabled{opacity:.45;cursor:default}
     #preference-status:empty{display:none}
     :host([data-theme="light"]) header{background:#fff;border-color:#d8dde5}
     :host([data-theme="light"]) header button{background:#f5f6f8;border-color:#c8ced8}
     :host([data-theme="light"]) .mode-badge{background:#e9effa;color:#2a4e85}
     :host([data-theme="light"]) #status,:host([data-theme="light"]) .version{color:#596273}
-    @media(max-width:1200px){#toolbar-actions{flex:1 1 100%;justify-content:flex-start}header{gap:10px}.reader-summary{flex-direction:row;align-items:center;gap:16px;flex-wrap:wrap}}
-    @media(max-width:600px){header{padding:10px;font-size:14px}#width{width:75px}.reader-title strong{font-size:16px}.reader-summary{gap:6px}#toolbar-actions{gap:6px}}
-  </style><div id="reader"><header><div class="reader-summary"><div class="reader-title"><strong>连续滚动</strong><span class="version">v2.0.14</span><span class="mode-badge">${BATCH ? '每次加载 10 页' : '全部加载'}</span></div><span id="status" role="status"></span></div><div id="toolbar-actions"><button id="pause">暂停加载</button><button id="retry" hidden>重试失败项</button><label class="width-control">宽度 <input id="width" type="range" min="400" max="1600" step="10" value="1000"><input id="width-number" aria-label="漫画宽度" type="number" min="400" max="1600" step="10" value="1000" style="width:76px"> px</label><button id="theme" aria-label="切换黑白背景">白色背景</button><span id="preference-status" role="status"></span><button id="settings">设置</button><button id="original">原网页</button></div></header><div id="help"></div><main></main><footer id="sentinel"></footer></div><button id="resume" hidden>回到滚动阅读</button>`;
+    @media(max-width:1300px){
+      header{display:grid;grid-template-columns:minmax(0,1fr);padding:10px 14px}
+      .reader-summary{flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px 16px}
+      #toolbar-actions{display:grid;grid-template-columns:auto minmax(240px,1fr) auto auto auto auto}
+      .width-control{grid-column:2;grid-row:1}#width{flex:1;width:60px}
+      #theme{grid-column:3;grid-row:1}#settings{grid-column:4;grid-row:1}#original{grid-column:5;grid-row:1}
+      #toolbar-actions>label{grid-column:6;grid-row:1}#pause{grid-column:1;grid-row:1}
+      #retry,#preference-status{grid-column:1/-1;justify-self:start}
+    }
+    @media(max-width:850px){
+      #toolbar-actions{grid-template-columns:repeat(4,minmax(0,1fr)) auto;gap:8px}
+      .width-control{grid-column:1/-1;grid-row:1}
+      #pause{grid-column:1;grid-row:2}#theme{grid-column:2;grid-row:2}#settings{grid-column:3;grid-row:2}#original{grid-column:4;grid-row:2}
+      #toolbar-actions>label{grid-column:5;grid-row:2;justify-self:end}
+    }
+    @media(max-width:700px){#toolbar-actions{grid-template-columns:repeat(4,minmax(0,1fr))}#toolbar-actions>label{grid-column:1/-1;grid-row:3}}
+    @media(max-width:480px){header{padding:8px}.reader-summary{align-items:flex-start}#toolbar-actions{grid-template-columns:repeat(2,minmax(0,1fr))}#settings{grid-column:1;grid-row:3}#original{grid-column:2;grid-row:3}#toolbar-actions>label{grid-row:4}}
+  </style><div id="reader"><header><div class="reader-summary"><div class="reader-title"><strong>连续滚动</strong><span class="version">v2.0.15</span><span class="mode-badge">${BATCH ? '每次加载 10 页' : '全部加载'}</span></div><span id="status" role="status"></span></div><div id="toolbar-actions"><button id="pause">暂停加载</button><button id="retry" hidden>重试失败项</button><div class="width-control"><label for="width">宽度</label> <input id="width" type="range" min="400" max="1600" step="10" value="1000"><button type="button" id="width-minus" aria-label="减小宽度" title="减小宽度（10 px）">−</button><input id="width-number" aria-label="漫画宽度" type="number" min="400" max="1600" step="10" value="1000" style="width:76px"><button type="button" id="width-plus" aria-label="增加宽度" title="增加宽度（10 px）">+</button><span>px</span></div><button id="theme" aria-label="切换黑白背景">白色背景</button><span id="preference-status" role="status"></span><button id="settings">设置</button><button id="original">原网页</button></div></header><div id="help"></div><main></main><footer id="sentinel"></footer></div><button id="resume" hidden>回到滚动阅读</button>`;
   const q = selector => shadow.querySelector(selector);
   q('#settings').onclick = () => globalThis.openReaderSettings(shadow, mode);
   const main = q('main');
@@ -104,6 +123,8 @@
     main.style.setProperty('--width', preferredWidth+'px');
     q('#width').value=preferredWidth;
     q('#width-number').value=preferredWidth;
+    q('#width-minus').disabled=preferredWidth<=400;
+    q('#width-plus').disabled=preferredWidth>=1600;
   }
   async function savePreference(value) {
     try { await chrome.storage.local.set(value);q('#preference-status').textContent=''; }
@@ -117,6 +138,11 @@
   q('#theme').onclick=()=>{applyTheme(host.dataset.theme==='light'?'dark':'light');savePreference({theme:host.dataset.theme});};
   q('#width-number').onchange=e=>{applyWidth(e.target.value);savePreference({width:preferredWidth});checkBottom();};
   q('#width').onchange=()=>savePreference({width:preferredWidth});
+  for(const [id,step] of [['#width-minus',-10],['#width-plus',10]])q(id).onclick=()=>{
+    const position=captureReadingPosition();
+    applyWidth(preferredWidth+step);restoreReadingPosition(position);
+    savePreference({width:preferredWidth});checkBottom();
+  };
   document.body.prepend(host);
   const style = document.createElement('style');
   style.textContent = 'html.continuous-reader-active body{margin:0!important;padding:0!important;min-width:0!important}html.continuous-reader-active body>*:not(#continuous-reader-host){display:none!important}';
